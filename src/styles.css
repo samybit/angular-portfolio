@@ -41,3 +41,33 @@ body {
   transform: rotate(-2deg);
   display: inline-block;
 }
+
+
+/* Custom Scrollbar for Webkit Browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--fallback-b2, #f9fafb);
+  /* Matches base-200 */
+  border-left: 1px solid #e5e7eb;
+  /* Subtle border to separate from content */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  /* Primary Black */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #E6C275;
+  /* Gold Accent on hover */
+}
+
+/* Custom Scrollbar for Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #000000 var(--fallback-b2, #f9fafb);
+}
