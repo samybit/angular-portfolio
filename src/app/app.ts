@@ -1,30 +1,10 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
-
-interface CertificateData {
-  title: string;
-  subtitle: string;
-  authority: string;
-  url: string;
-  stack: string;
-  developer: string;
-  date: string;
-  certifiedBy: string;
-}
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [RouterOutlet],
+  template: `<router-outlet></router-outlet>`,
 })
-export class App {
-  readonly certificate = signal<CertificateData>({
-    title: 'DEVELOPER PORTFOLIO',
-    subtitle: 'Official Engineering Record',
-    authority: 'Information Technology Institute (ITI)',
-    url: 'github.com/SamyBarsoum',
-    stack: 'Angular, MERN, TypeScript',
-    developer: 'Samy Barsoum',
-    date: new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }),
-    certifiedBy: 'System Authenticated'
-  });
-}
+export class App {}

@@ -1,0 +1,25 @@
+<header class="navbar bg-base-100 border-b border-base-200 sticky top-0 z-50 px-4 md:px-8">
+  <div class="flex-1">
+    <a routerLink="/" class="text-xl font-black tracking-tighter uppercase cursor-pointer">
+      Samy<span class="text-accent">_</span>
+    </a>
+  </div>
+  <div class="flex-none">
+    <ul class="menu menu-horizontal px-1 font-bold text-sm tracking-widest uppercase">
+      <li><a routerLink="/home" routerLinkActive="text-accent">Home</a></li>
+      <li><a routerLink="/projects" routerLinkActive="text-accent">Projects</a></li>
+      <li><a routerLink="/about" routerLinkActive="text-accent">About</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="flex-grow bg-base-200">
+  <router-outlet></router-outlet>
+</main>
+
+<footer
+  class="footer footer-center p-10 bg-base-100 text-base-content border-t border-base-200 uppercase tracking-widest text-xs font-bold">
+  <aside>
+    <p>Engineered by Samy Barsoum © 2026</p>
+  </aside>
+</footer>
