@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+/* src/styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply bg-base-200 antialiased min-h-screen m-0 p-0;
+}
+
+/* Reusable visual patterns for the certificate */
+.ruled-pattern {
+  background-image: repeating-linear-gradient(to bottom,
+      transparent,
+      transparent 19px,
+      var(--fallback-b2, #e5e7eb) 20px);
+  background-position: top;
+}
+
+.gold-pattern {
+  background-color: #E6C275;
+  background-image:
+    repeating-linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.15) 0px,
+      rgba(0, 0, 0, 0.0) 15px,
+      rgba(255, 255, 255, 0.1) 30px,
+      rgba(0, 0, 0, 0.15) 30px,
+      rgba(0, 0, 0, 0.25) 45px,
+      rgba(0, 0, 0, 0.1) 60px),
+    linear-gradient(135deg,
+      #8a6d3b 0%,
+      #d4af37 30%,
+      #f3e5ab 50%,
+      #d4af37 70%,
+      #8a6d3b 100%);
+  background-blend-mode: overlay, normal;
+}
+
+.signature-font {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  letter-spacing: -0.05em;
+  transform: rotate(-2deg);
+  display: inline-block;
+}
